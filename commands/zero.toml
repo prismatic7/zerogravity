@@ -1,0 +1,2 @@
+description = "Delegate a task to the zero coding agent"
+prompt = "Delegate the following task to the zero coding agent in the current workspace: {{args}}. Run the zero agent using the command-line tool."
