@@ -15,3 +15,11 @@ Thumbs.db
 tmp/
 temp/
 *.log
+
+# Superpowers SDD temporary workspaces
+.superpowers/
+
+# Zero agent execution files
+.zero/
+.zero-prompt.md
+

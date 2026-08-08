@@ -1,4 +1,12 @@
+# Command Definition for `/zero`
+# Configures the `/zero` slash command behaviour in the Antigravity TUI.
+
+# Short description displayed in slash command auto-complete menus.
 description = "Delegate a task to the zero coding agent"
+
+# Prompt template executed when `/zero` is invoked.
+# Uses TOML multi-line basic strings (""") with backslashes for line continuation.
+# `{{args}}` is a template parameter replaced with user-supplied arguments.
 prompt = """
 Delegate the following task to the zero coding agent in the \
 current workspace. Write the prompt content ({{args}}) into a \
@@ -6,3 +14,4 @@ temporary file (e.g. .zero-prompt.md) and execute zero using \
 `zero exec --cwd . --file .zero-prompt.md --auto medium` to avoid shell \
 command injection.\
 """
+

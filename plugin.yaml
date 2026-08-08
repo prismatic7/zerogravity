@@ -1,8 +1,23 @@
+# Antigravity Plugin Manifest (`plugin.yaml`)
+# Defines plugin metadata, registered commands, and skills exposed to the Antigravity TUI.
+
+# Unique identifier for the plugin.
 name: zerogravity
+
+# Semantic versioning identifier for release tracking.
 version: 0.1.0
+
+# Human-readable summary displayed in plugin listings.
 description: Google Antigravity plugin for delegating tasks to the zero coding agent.
+
+# Maintainer or author information.
 author: Chris Wenn
+
+# Slash commands exported by this plugin (maps to definitions in /commands/).
 provides_commands:
   - zero
+
+# Custom agent skills exported by this plugin (maps to skill folders in /skills/).
 provides_skills:
   - zero-delegate
+

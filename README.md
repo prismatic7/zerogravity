@@ -37,3 +37,38 @@
 ## Contributing
 
 Please follow the pull request checklist in `.github/PULL_REQUEST_TEMPLATE.md`.
+
+### Adding New Commands
+
+Slash commands in `zerogravity` are defined using TOML files placed inside the
+[commands/](commands/) directory. Each `.toml` file corresponds to a slash command in the
+Antigravity TUI.
+
+To create a new slash command (for example, `/custom`):
+
+1. Create a TOML file at `commands/custom.toml`.
+2. Add a `description` and a multi-line `prompt` template:
+
+```toml
+# commands/custom.toml
+description = "A brief description displayed in auto-complete menus"
+prompt = """
+Instructions for the agent when the command is invoked. \
+Use {{args}} to substitute user-supplied arguments.\
+"""
+```
+
+3. Verify prompt expansion and agent behaviour in the Antigravity TUI.
+
+### Local Conventions
+
+When contributing code or documentation to `zerogravity`, please observe the following local
+conventions:
+
+- **Spelling Register**: Always use Australian English spelling (e.g. *behaviour*,
+  *localisation*, *organise*, *colour*).
+- **Line Length Boundaries**: Ensure lines are wrapped to strictly under 100 characters per line.
+- **Prompt Injection Prevention**: Never execute raw user input directly inside shell scripts
+  or command strings. Pass user arguments (`{{args}}`) safely via temporary files or input
+  sanitisation to mitigate injection risks.
+
