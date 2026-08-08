@@ -1,7 +1,7 @@
 # Security Guardrails
 
 ## 1. Environment Safety
-- Avoid hardcoding absolute paths to user home directories outside the allowed `/Users/chris/Development/` workspace.
+- Avoid hardcoding absolute paths to user home directories outside the allowed current workspace directory.
 - The `zero` MCP server requires `--allow-unsafe-tools` for full execution. Warn users in documentation that this grants write/execution permissions to the assistant.
 
 ## 2. Secrets Management

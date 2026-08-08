@@ -20,17 +20,19 @@
      "mcpServers": {
        "zero": {
          "command": "zero",
-         "args": ["serve", "--mcp", "--allow-unsafe-tools"]
+         "args": ["serve", "--mcp"]
        }
      }
    }
    ```
 
-   This will expose all coding, search, and navigation tools from `zero` to your Antigravity agent.
+   This will expose standard code navigation and search tools from `zero` to your agent.
 
 > [!WARNING]
-> The `--allow-unsafe-tools` flag exposes file writing and command execution
-> tools to the AI assistant. Only enable this flag in trusted workspaces.
+> The `--allow-unsafe-tools` flag is optional and should be omitted if read-only analysis
+> is preferred. If enabled, it grants system-wide file modification and command execution
+> capabilities. To limit access, scope the server workspace using `-C <path>` when necessary
+> (e.g. `["serve", "--mcp", "--allow-unsafe-tools", "-C", "/path/to/project"]`).
 
 ## Contributing
 
