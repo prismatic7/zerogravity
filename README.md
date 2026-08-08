@@ -1,19 +1,31 @@
 # zerogravity
 
-`zerogravity` is a repository for tools, scripts, and documentation supporting creative computing projects.
+`zerogravity` is a Google Antigravity CLI plugin to delegate coding tasks to the `zero` agent.
 
-## Project Goals
-- Organise utility code and configuration across platforms.
-- Explore creative possibilities in natural language and emergent machine behaviour.
-- Provide a clean workspace for theatre and sound design code development.
+## Features
+- **Slash Command (`/zero`)**: Quickly run coding tasks via `/zero <your-prompt>`.
+- **Skill (`zero-delegate`)**: Allows Antigravity agents to delegate coding goals autonomously.
+- **MCP Server**: Call tools like code-navigation and filesystem operations directly via the `zero` protocol.
 
-## Getting Started
+## Installation
 
-### Installation
-Clone this repository to your local system:
-```bash
-git clone git@github.com:prismatic7/zerogravity.git
-```
+1. Symlink this plugin folder into your Antigravity plugins directory:
+   ```bash
+   ln -s /Users/chris/Development/zerogravity /Users/chris/.gemini/config/plugins/zerogravity
+   ```
+
+2. Register the `zero` MCP server in your `/Users/chris/.gemini/config/mcp_config.json`:
+   ```json
+   {
+     "mcpServers": {
+       "zero": {
+         "command": "zero",
+         "args": ["serve", "--mcp", "--allow-unsafe-tools"]
+       }
+     }
+   }
+   ```
+   This will expose all coding, search, and navigation tools of `zero` to your Antigravity agent.
 
 ## Contributing
-Please ensure changes are documented and follow the pull request checklist.
+Please follow the pull request checklist in `.github/PULL_REQUEST_TEMPLATE.md`.
