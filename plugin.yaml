@@ -20,4 +20,5 @@ provides_commands:
 # Custom agent skills exported by this plugin (maps to skill folders in /skills/).
 provides_skills:
   - zero-delegate
+  - plugin-development
 
