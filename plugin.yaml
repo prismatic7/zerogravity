@@ -1,0 +1,8 @@
+name: zerogravity
+version: 0.1.0
+description: Google Antigravity plugin for delegating tasks to the zero coding agent.
+author: Chris Wenn
+provides_commands:
+  - zero
+provides_skills:
+  - zero-delegate
